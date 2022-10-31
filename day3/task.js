@@ -3,25 +3,25 @@ const jsonData =
 
 const objData = JSON.parse(jsonData);
 
-// // Iterate using "for" loop
-// for (let i = 0; i < Object.keys(objData).length; i++) {
-//   console.log(`${Object.keys(objData)[i]} => ${Object.values(objData)[i]}`);
-// }
+// Iterate using "for" loop
+for (let i = 0; i < Object.keys(objData).length; i++) {
+  console.log(`${Object.keys(objData)[i]} => ${Object.values(objData)[i]}`);
+}
 
-// // Iterate using "for-in" loop
-// for (let key in objData) {
-//   console.log(`${key} => ${objData[key]}`);
-// }
+// Iterate using "for-in" loop
+for (let key in objData) {
+  console.log(`${key} => ${objData[key]}`);
+}
 
-// // Iterate using "for-of" loop
-// for (let index of Object.keys(objData)) {
-//   console.log(`${index} => ${objData[index]}`);
-// }
+// Iterate using "for-of" loop
+for (let index of Object.keys(objData)) {
+  console.log(`${index} => ${objData[index]}`);
+}
 
-// // Iterate using "forEach" function
-// Object.keys(objData).forEach(function (index) {
-//   console.log(`${index} => ${objData[index]}`);
-// });
+// Iterate using "forEach" function
+Object.keys(objData).forEach(function (index) {
+  console.log(`${index} => ${objData[index]}`);
+});
 
 // ----------------------------- Resume -----------------------------------
 

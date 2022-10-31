@@ -1,0 +1,33 @@
+{
+  "firstName": "Vivek",
+  "lastName": "Kus",
+  "skill": "Developer",
+  "contact": { "email": "vivek@gmail.com", "phone": "9999955555" },
+  "description": "Self-taught, enthusiastic and highly motivated individual dedicated for writing clear, concise, robust code that works. I like creating products that either have fun and nifty features or solve genuine problem for people.",
+  "education": [
+    "B.Tech Electronics and Communication, IIIT-D",
+    "Higher Secondary Certificate, Kendriya Vidyalaya",
+    "Secondary School Certificate, Kendriya Vidyalaya"
+  ],
+  "technologiesAndLanguages": {
+    "languages": ["JavaScript, Python, C++"],
+    "technologies": ["ReactJs", "Redux", "NodeJS", "MongoDB"],
+    "others": ["Git", "GitHub", "HTML/CSS", "Bootstrap"]
+  },
+  "projects": ["Portfolio", "PokeDesk", "Quotes Generator"],
+  "certifications": [
+    "Python Programming, University of Michigan",
+    "Python Data Structures, University of Michigan"
+  ],
+  "otherSections": {
+    "volunteerWork": "Helping online students with their day to day programming problems.",
+    "community": [
+      "GitHub",
+      "StackOverflow",
+      "Udemy",
+      "Twitter Community",
+      "Discord"
+    ],
+    "languages": ["English", "Hindi"]
+  }
+}

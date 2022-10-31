@@ -10,7 +10,7 @@
     "Secondary School Certificate, Kendriya Vidyalaya"
   ],
   "technologiesAndLanguages": {
-    "languages": ["JavaScript, Python, C++"],
+    "languages": ["JavaScript", "Python", "C++"],
     "technologies": ["ReactJs", "Redux", "NodeJS", "MongoDB"],
     "others": ["Git", "GitHub", "HTML/CSS", "Bootstrap"]
   },

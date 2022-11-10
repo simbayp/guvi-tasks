@@ -227,7 +227,7 @@ alert(a + b);
 
 ## Solution 6.
 
-### The input form of `alert()` is String, so we first need to convert the input to an number using `Number()`
+### The input form of `alert()` is String, so we first need to convert the input to a number using `Number()`
 
 ```js
 script.js

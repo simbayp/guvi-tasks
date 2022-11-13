@@ -79,7 +79,7 @@ class Person {
     return `${this.firstName} ${this.lastName}`;
   }
   getAge() {
-    return `${this.fullName} is ${this.age} years old.`;
+    return `${this.fullName()} is ${this.age} years old.`;
   }
   getCity() {
     return `${this.fullName()} lives in ${this.city}.`;

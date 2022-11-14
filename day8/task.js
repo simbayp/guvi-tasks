@@ -5,7 +5,7 @@ xhr.send();
 
 xhr.onload = function () {
   var data = JSON.parse(xhr.response);
-  console.log(data);
+  console.log(data); // output -> An array of all the 250 countries
 };
 
 // ------------------------------ Task 1 ----------------------------------
@@ -35,7 +35,7 @@ xhr2.onload = function () {
   var lessThanTwoLakhPopulation = data.filter(
     (country) => country.population < 200000
   );
-  console.log(lessThanTwoLakhPopulation); // output -> All the countries with population less than 2 lakh
+  console.log(lessThanTwoLakhPopulation); // output -> All the 62 countries with population less than 2 lakh
 };
 
 // ------------------------------ Task 3 ----------------------------------
@@ -57,7 +57,7 @@ xhr3.onload = function () {
     };
     array.push(obj);
   });
-  console.log(array); // output -> An array of all the countries with name, capital and flag
+  console.log(array); // output -> An array of all the 250 countries with name, capital and flag
 };
 
 // ------------------------------ Task 4 ----------------------------------
@@ -72,7 +72,7 @@ xhr4.onload = function () {
   var data = JSON.parse(xhr4.response);
   var populationData = data.map((country) => country.population);
   var totalPopulation = populationData.reduce((acc, next) => acc + next);
-  console.log(totalPopulation); // output -> 7759438109
+  console.log(totalPopulation); // output -> 7759438109 which is the total world population
 };
 
 // ------------------------------ Task 5 ----------------------------------

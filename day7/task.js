@@ -52,9 +52,9 @@ console.log(CasinoRoyale.getRating());
 
 // output ->
 // Movie3 {title: 'Casino Royale', studio: 'Eon Productions', rating: 'PG13'}
-// task.js:49 Title of the movie is Casino Royale.
-// task.js:50 Name of the studio which produced this movie is Eon Productions.
-// task.js:51 This movie is rated PG13.
+// Title of the movie is Casino Royale.
+// Name of the studio which produced this movie is Eon Productions.
+// This movie is rated PG13.
 
 // ------------------------------ Task 2 ----------------------------------
 // Convert the UML diagram to JavaScript class.

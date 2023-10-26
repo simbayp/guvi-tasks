@@ -26,6 +26,7 @@ sum(2, 4);
 
 // --------------------------------------------------------
 
+// 'this' will not refer to current object
 function hello() {
   var firstName = "Virat";
   var city = "Delhi";
@@ -41,8 +42,58 @@ function hello() {
     },
   };
 
-  console.log(user.getName());
-  console.log(user.getCity());
+  console.log(user.getName()); // undefined
+  console.log(user.getCity()); // undefined
+}
+
+hello();
+
+//
+var firstName = "Guvi";
+var city = "Chennai";
+
+function hello() {
+  var firstName = "Virat";
+  var city = "Delhi";
+
+  const user = {
+    firstName: "Rishab",
+    city: "Roorkee",
+    getName: () => {
+      return this.firstName;
+    },
+    getCity: function() {
+      return this.city;
+    },
+  };
+
+  console.log(user.getName()); // Guvi
+  console.log(user.getCity()); // Roorkee
+}
+
+hello();
+
+//
+var firstName = "Guvi";
+var city = "Chennai";
+
+const hello = () => {
+  var firstName = "Virat";
+  var city = "Delhi";
+
+  const user = {
+    firstName: "Rishab",
+    city: "Roorkee",
+    getName: () => {
+      return this.firstName;
+    },
+    getCity: function() {
+      return this.city;
+    },
+  };
+
+  console.log(user.getName()); // Guvi
+  console.log(user.getCity()); // Roorkee
 }
 
 hello();
@@ -58,7 +109,7 @@ const calculator = {
 
   add: function (a, b) {
     console.log(this.fullName); // Virat Kohli
-    console.log(arguments); // [2, 4, callee, Symbol]
+    console.log(arguments); // [2, 4, callee, Symbol] - but length of this array will be 2
     return a + b;
   },
 
@@ -68,27 +119,27 @@ const calculator = {
     return a - b;
   },
 
-  multiply(a, b) {
+  multiply(a, b) { // will be treated as 'multiply: function (a, b) {' ...etc
     console.log(this.fullName); // Virat Kohli
-    console.log(arguments); // [3, 5, callee, Symbol]
+    console.log(arguments); // [3, 5, callee, Symbol] - but length of this array will be 2
     return a * b;
   },
 };
 
 console.log(calculator.add(2, 4));
-// console.log(calculator.sub(6, 1));
+console.log(calculator.sub(6, 1));
 console.log(calculator.multiply(3, 5));
 
 // // 4. in terms of duplicate parameters
 function add(a, a) {
   return a + a;
 }
-console.log(add(12, 45)); // output -> 90
+console.log(add(12, 45)); // output -> 90 - it will take the recent value
 
 const add = (a, a) => a + a;
 console.log(add(12, 45)); // Duplicate parameter error
 
-// // 5. in terms of 'constructor' functions
+// // 5. in terms of 'constructor' functions -> Regular functions are constructible while arrow functions aren't
 function add(a, b) {
   console.log(a + b);
 }
@@ -100,7 +151,7 @@ new add(12, 20); // TypeError - add not a constructor
 // --------------------------------------------------------
 
 // Generator functions
-function* calculator(a, b) {
+function * calculator(a, b) {
   yield a + b;
   yield a - b;
   yield a * b;
@@ -108,15 +159,16 @@ function* calculator(a, b) {
   yield a % b;
 }
 
-console.log(calculator(10, 2));
+console.log(calculator(10, 2)); // calculator <suspended>
 const values = calculator(10, 2);
-console.log(values);
+console.log(values); // calculator <suspended>
 
-console.log(values.next());
-console.log(values.next());
-console.log(values.next());
-console.log(values.next());
-console.log(values.next());
+console.log(values.next()); // {value: 12, done: false}
+console.log(values.next()); // {value: 8, done: false}
+console.log(values.next()); // {value: 20, done: false}
+console.log(values.next()); // {value: 5, done: false}
+console.log(values.next()); // {value: 0, done: false}
+console.log(values.next()); // {value: undefined, done: true}
 
 // --------------------------------------------------------
 

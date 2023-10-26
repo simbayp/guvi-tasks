@@ -1,0 +1,31 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #5c258d, #4389a2);
+}
+
+h1 {
+  padding-top: 50px;
+}
+
+.row {
+  background-color: trans;
+}
+
+.card-back {
+  background: linear-gradient(to right, #5c258d, #4389a2);
+}
+
+#card {
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  box-shadow: rgb(128, 152, 156) 0px 20px 30px 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+#country {
+  color: #090909;
+  background-color: whitesmoke;
+}

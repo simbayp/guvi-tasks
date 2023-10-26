@@ -2,6 +2,25 @@
   font-family: 'Orbitron', sans-serif;
 }
 
+body {
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  height: 100vh;
+}
+
 .calcWrapper {
   margin-top: 5rem;
   display: flex;
@@ -27,7 +46,7 @@
   border: solid #e1e1e1 2px;
   border-radius: 20px;
   height: 80px;
-  background-color: white;
+  background-color: #e5e4e2;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -83,8 +102,20 @@ button.zero {
   flex: 2.5;
 }
 
+.buttons .operator {
+  background-color: rgba(255, 85, 0, 0.3);
+}
+
+.buttons .equalsButton {
+  background-color: rgba(255, 85, 0, 0.7);
+}
+
+.buttons .top {
+  background-color: rgba(182, 182, 182, 0.5);
+}
+
 .operator:hover {
-  background-color: rgb(255, 85, 0);
+  background-color: rgba(255, 85, 0, 0.7);
   cursor: pointer;
 }
 

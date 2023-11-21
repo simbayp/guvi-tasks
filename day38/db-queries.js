@@ -1,3 +1,46 @@
+// Design database for Zen class programme
+const mongoose = require('mongoose');
+
+// Access your MongoDB connection string from secrets
+const mongoURI = process.env.MONGODB;
+
+// Use mongoose to connect
+mongoose
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+  });
+
+const classSchema = new mongoose.Schema(
+  {
+    users: {
+      type: [String],
+      required: true,
+    },
+    codekata: {
+      type: String,
+      required: true,
+    },
+    attendance: {
+      type: Number,
+      required: true,
+    },
+    topics: [String],
+    tasks: [String],
+    company_drives: [String],
+    mentors: [String],
+  },
+  { timestamps: true }
+);
+
+const ZenClass = mongoose.model('ZenClass', classSchema);
+
 // 1. Find all the topics and tasks taught in the month of October:
 db.topics.find({
   _id: {
